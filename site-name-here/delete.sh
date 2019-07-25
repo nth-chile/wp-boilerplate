@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Deletes WP core files and directories
+# Deletes WP core files and directories.
 
 bold=$(tput bold)
 cyan='\033[0;36m'

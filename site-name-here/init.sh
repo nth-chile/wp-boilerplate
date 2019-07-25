@@ -32,5 +32,17 @@ wp db create
 # Install WP
 wp core install --prompt
 
-# Add src and compilers for JS and SCSS
-# Init git
+# Make content directories
+mkdir wp-content
+mkdir wp-content/themes
+mkdir wp-content/plugins
+mkdir wp-content/upgrade
+mkdir wp-content/uploads
+
+# Add index.php to new directories
+echo "<?php // Silence is golden" > wp-content/index.php
+cp wp-content/index.php wp-content/themes/index.php
+cp wp-content/index.php wp-content/plugins/index.php
+
+# Move theme to themes directory
+mv theme-name-here wp-content/themes/theme-name-here
