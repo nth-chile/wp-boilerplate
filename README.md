@@ -1,19 +1,15 @@
 # wp-boilerplate
 
-This repo includes:
-
-- a bash script that installs WordPress without default themes
-- a blank theme containing boilerplate and npm scripts for writing SCSS and modern JavaScript
+Installs WordPress and a blank theme set up for writing SCSS and ES6. Includes WP Migrate DB Pro and recent versions of all its addons. The core wpmdbpro plugin is modified so that push/pull works without a license.
 
 ## Create new WordPress site
 
-1. Rename the `site-name-here` directory and move it to where you host WP sites.
-2. From that directory, run `$ bash init.sh`.
-3. From the `theme/theme-name-here` directory, run `npm install` or `yarn`.
+1. `$ cd site-name-here`
+2. `$ bash init.sh`
+3. `cd` to theme directory a do `$ npm install` or `$ yarn`
+4. Use the watch command with `$ npm run dev` or `$ yarn dev`
 
-When working, first start the watch command `yarn dev`.
+## Notes
 
-### Notes:
-
-- When `init.sh` prompts for *dbuser*, you need to enter an existing MySQL user with privileges to create and change databases
-- I am using MAMP, and by default my *dbhost* is `127.0.0.1:3306`, and the *url* I enter is `localhost`.
+- When _init.sh_ prompts for **dbuser**, enter an existing MySQL user with privileges to create and change databases.
+- If you are using MAMP, the default **dbhost** is `127.0.0.1:3306`. The **url** I enter is `site-name-here.localhost`. I add a `VirtualHost` to MAMP's _httpd-vhosts.conf_ file to point that subdomain to the site directory.

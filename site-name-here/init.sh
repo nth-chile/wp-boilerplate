@@ -5,7 +5,6 @@ cyan='\033[0;36m'
 
 # Set $WP_CLI_PHP to the MAMP php directory
 export WP_CLI_PHP=/Applications/MAMP/bin/php/php7.3.1/bin/php
-echo $WP_CLI_PHP
 
 # Install WP-CLI if not installed
 hash wp 2>/dev/null
@@ -46,3 +45,10 @@ cp wp-content/index.php wp-content/plugins/index.php
 
 # Move theme to themes directory
 mv theme-name-here wp-content/themes/theme-name-here
+
+# Install WP Migrate DB with addons
+wp plugin install ../wp-migrate-db-pro-1.9.1.zip --activate
+wp plugin install ../wp-migrate-db-pro-cli-1.3.4.zip --activate
+wp plugin install ../wp-migrate-db-pro-media-files-1.4.12.zip --activate
+wp plugin install ../wp-migrate-db-pro-multisite-tools-1.2.zip --activate
+wp plugin install ../wp-migrate-db-pro-theme-plugin-files-1.0.4.zip --activate
