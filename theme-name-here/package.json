@@ -1,9 +1,9 @@
 {
   "scripts": {
     "compile-js": "babel ./es6 --watch --out-dir ./js",
-    "compile-scss": "node-sass scss/index.scss css/main.min.css --output-style compressed",
-    "compile-scss:watch": "npm run compile-scss && node-sass -w scss/index.scss -w css/main.min.css --output-style compressed",
-    "autoprefixer": "postcss css/main.min.css --use autoprefixer -o css/main.min.css --watch",
+    "compile-scss": "node-sass scss/index.scss style.css --output-style compressed",
+    "compile-scss:watch": "npm run compile-scss && node-sass -w scss/index.scss -w style.css --output-style compressed",
+    "autoprefixer": "postcss style.css --use autoprefixer -o style.css --watch",
     "dev": "npm run compile-js & npm run compile-scss:watch & npm run autoprefixer"
   },
   "dependencies": {
