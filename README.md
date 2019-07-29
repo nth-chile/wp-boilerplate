@@ -4,7 +4,7 @@ Installs WordPress and a blank theme set up for writing SCSS and ES6. Includes W
 
 ## Create new WordPress site
 
-1. `$ cd site-name-here`
+1. `$ cd wp-boilerplate`
 2. `$ bash init.sh`
 3. `cd` to theme directory and do `$ npm install` or `$ yarn`
 4. Start the watch command `$ npm run dev` or `$ yarn dev`

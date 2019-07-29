@@ -47,4 +47,4 @@ mv theme-name-here wp-content/themes/theme-name-here
 wp theme activate theme-name-here
 
 # Install WP Migrate DB with addons
-wp plugin install ../wp-migrate-db-pro-1.9.1.zip ../wp-migrate-db-pro-cli-1.3.4.zip ../wp-migrate-db-pro-media-files-1.4.12.zip ../wp-migrate-db-pro-multisite-tools-1.2.zip ../wp-migrate-db-pro-theme-plugin-files-1.0.4.zip --activate
+wp plugin install wp-migrate-db-pro-1.9.1.zip wp-migrate-db-pro-cli-1.3.4.zip wp-migrate-db-pro-media-files-1.4.12.zip wp-migrate-db-pro-multisite-tools-1.2.zip wp-migrate-db-pro-theme-plugin-files-1.0.4.zip --activate
