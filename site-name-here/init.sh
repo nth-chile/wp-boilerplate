@@ -19,7 +19,6 @@ then
 fi
 
 # Download WordPress
-printf "Downloading WordPress...\n"
 wp core download --skip-content
 
 # Create wp-config.php file
@@ -32,11 +31,9 @@ wp db create
 wp core install --prompt
 
 # Make content directories
-mkdir wp-content
 mkdir wp-content/themes
 mkdir wp-content/plugins
 mkdir wp-content/upgrade
-mkdir wp-content/uploads
 
 # Add index.php to new directories
 echo "<?php // Silence is golden" > wp-content/index.php
@@ -46,9 +43,8 @@ cp wp-content/index.php wp-content/plugins/index.php
 # Move theme to themes directory
 mv theme-name-here wp-content/themes/theme-name-here
 
+# Activate theme
+wp theme activate theme-name-here
+
 # Install WP Migrate DB with addons
-wp plugin install ../wp-migrate-db-pro-1.9.1.zip --activate
-wp plugin install ../wp-migrate-db-pro-cli-1.3.4.zip --activate
-wp plugin install ../wp-migrate-db-pro-media-files-1.4.12.zip --activate
-wp plugin install ../wp-migrate-db-pro-multisite-tools-1.2.zip --activate
-wp plugin install ../wp-migrate-db-pro-theme-plugin-files-1.0.4.zip --activate
+wp plugin install ../wp-migrate-db-pro-1.9.1.zip ../wp-migrate-db-pro-cli-1.3.4.zip ../wp-migrate-db-pro-media-files-1.4.12.zip ../wp-migrate-db-pro-multisite-tools-1.2.zip ../wp-migrate-db-pro-theme-plugin-files-1.0.4.zip --activate
